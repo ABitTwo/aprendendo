@@ -1,7 +1,6 @@
 package br.com.ana.projeto_integrador.service;
 
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 import br.com.ana.projeto_integrador.modelo.Usuario;
 import br.com.ana.projeto_integrador.modelo.UsuarioAutenticador;
