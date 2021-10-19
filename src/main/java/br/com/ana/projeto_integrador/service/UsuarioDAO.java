@@ -38,4 +38,9 @@ public class UsuarioDAO {
 		}
 		
 	}
+
+	public static boolean validar(UsuarioAutenticador user) {
+		return true;
+		
+	}
 }

@@ -25,9 +25,8 @@ public class MangaDAO {
 				manga.setNome(rs.getString("nome"));
 				manga.setAtor(rs.getString("ator"));
 				manga.setTipo(rs.getString("tipo"));
-				manga.setVolume(rs.getString("volume"));
-				manga.setNota(rs.getString("nota"));
-				manga.setUsuario(rs.getInt("usuario"));
+				manga.setVolume(rs.getInt("volume"));
+				manga.setValor(rs.getDouble("valor"));
 				
 				list.add(manga);
 			}
@@ -36,4 +35,21 @@ public class MangaDAO {
 		}
 		
 	}
+	
+	public static void inserir(Manga manga) throws Exception {
+		String sql = "INSERT INTO manga(nome,ator,tipo,volume,nota) VALUE(?,?,?,?,?)";
+		
+		try(PreparedStatement ps = DB.connect().prepareStatement(sql)){
+			ps.setString(1, manga.getNome());
+			ps.setString(2, manga.getAtor());
+			ps.setString(3, manga.getTipo());
+			ps.setInt(4, manga.getVolume());
+			ps.setDouble(5, manga.getValor());
+
+			
+			ps.execute();
+		}
+	}
+	
+	
 }

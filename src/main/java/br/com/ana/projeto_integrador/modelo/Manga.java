@@ -6,10 +6,15 @@ public class Manga {
 	private String nome;
 	private String ator;
 	private String tipo;
-	private String volume;
-	private String nota;
-	private int usuario;
+	private int volume;
+	private double valor;
 	
+	public double getValor() {
+		return valor;
+	}
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
 	public long getId() {
 		return id;
 	}
@@ -34,22 +39,12 @@ public class Manga {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public String getVolume() {
+	public int getVolume() {
 		return volume;
 	}
-	public void setVolume(String volume) {
+	public void setVolume(int volume) {
 		this.volume = volume;
 	}
-	public String getNota() {
-		return nota;
-	}
-	public void setNota(String nota) {
-		this.nota = nota;
-	}
-	public int getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(int usuario) {
-		this.usuario = usuario;
-	}
+	
+	
 }
